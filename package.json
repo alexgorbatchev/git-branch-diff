@@ -1,0 +1,37 @@
+{
+  "name": "git-branch-diff",
+  "version": "1.0.0",
+  "description": "This is a git utility that compares all local branches to one other branch and shows all files that have differences.",
+  "main": "./lib/git-branch-diff.js",
+  "bin": {
+    "git-branch-diff": "./git-branch-diff.js"
+  },
+  "author": {
+    "name": "Alex Gorbatchev",
+    "email": "alex.gorbatchev@gmail.com"
+  },
+  "scripts": {
+    "pretest": "coffee --bare --compile --output ./lib './src/git-branch-diff.coffee'",
+    "test": "mocha test/*.spec.coffee"
+  },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "git://github.com/alexgorbatchev/git-branch-diff.git"
+  },
+  "license" : "MIT",
+  "keywords" : ["git", "bulk", "branch", "diff"],
+  "dependencies": {
+    "ramda": "^0.2.2",
+    "songbird": "^1.0.1",
+    "yargs": "^1.2.6"
+  },
+  "devDependencies": {
+    "coffee-script": "*",
+    "coffee-errors": "*",
+    "sinon-chai": "*",
+    "chai": "*",
+    "sinon": "*",
+    "mocha": "*"
+  }
+}
