@@ -11,7 +11,7 @@
     "email": "alex.gorbatchev@gmail.com"
   },
   "scripts": {
-    "pretest": "coffee --bare --compile --output ./lib './src/git-branch-diff.coffee'",
+    "pretest": "coffee --bare --compile --output ./lib ./src/*.coffee",
     "test": "mocha test/*.spec.coffee"
   },
   "repository" :
