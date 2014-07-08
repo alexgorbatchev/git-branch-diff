@@ -5,7 +5,7 @@
 [![devDependency Status](https://david-dm.org/alexgorbatchev/generator-coffee-module/dev-status.svg)](https://david-dm.org/alexgorbatchev/generator-coffee-module#info=devDependencies)
 [![Build Status](https://secure.travis-ci.org/alexgorbatchev/git-branch-diff.svg?branch=master)](https://travis-ci.org/alexgorbatchev/git-branch-diff)
 
-[[NPM](https://nodei.co/npm/generator-coffee-module.svg)](https://npmjs.org/package/git-branch-diff)
+[![NPM](https://nodei.co/npm/generator-coffee-module.svg)](https://npmjs.org/package/git-branch-diff)
 
 This is a git utility that compares all local branches to one other branch and shows all files that have differences. This tool is useful if you are working with production branch that is a result of squash committs instead of merges.
 
