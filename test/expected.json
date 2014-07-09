@@ -2,13 +2,19 @@
   {
     "branch": "patch-1",
     "files": [
-      "README.md"
+      {
+        "diff": "diff --git a/README.md b/README.md\nindex 6de7b8c..f4a3240 100644\n--- a/README.md\n+++ b/README.md\n@@ -1 +1,4 @@\n This is a test file.\n+\n+Here's a change.\n+",
+        "file": "README.md"
+      }
     ]
   },
   {
     "branch": "patch-2",
     "files": [
-      "new-file.txt"
+      {
+        "diff": "diff --git a/new-file.txt b/new-file.txt\nnew file mode 100644\nindex 0000000..9a1643e\n--- /dev/null\n+++ b/new-file.txt\n@@ -0,0 +1,2 @@\n+This is a new file added in this patch.\n+",
+        "file": "new-file.txt"
+      }
     ]
   }
 ]

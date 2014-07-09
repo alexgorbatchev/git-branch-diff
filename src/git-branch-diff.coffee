@@ -31,7 +31,7 @@ module.exports = (repository, targetBranch) ->
 
   getDiffWithBranch = R.curry (branch, file) ->
     git "--no-pager diff #{targetBranch}..#{branch} -- #{file}"
-      .then (diff) -> {file, hasDiff: diff.length > 0}
+      .then (diff) -> {file, diff: diff.join('\n')}
 
   getBranches()
     .then R.map getChangedFilesInBranch
@@ -39,10 +39,8 @@ module.exports = (repository, targetBranch) ->
     .then R.filter R.prop 'files'
     .then R.map ({branch, files}) ->
       Promise
-        .all files.map getDiffWithBranch(branch)
-        .then R.filter R.prop 'hasDiff'
-        .then R.pluck 'file'
+        .all files.map getDiffWithBranch branch
+        .then R.filter R.prop 'diff'
         .then filesToObject branch
     .then Promise.all
     .then R.filter R.prop 'files'
-

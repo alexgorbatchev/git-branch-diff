@@ -21,13 +21,19 @@ This is a git utility that compares all local branches to one other branch and s
       {
         "branch": "patch-1",
         "files": [
-          "README.md"
+          {
+            "file": "README.md",
+            "diff": "..."
+          }
         ]
       },
       {
         "branch": "patch-2",
         "files": [
-          "new-file.txt"
+          {
+            "file": "new-file.txt",
+            "diff": "..."
+          }
         ]
       }
     ]
