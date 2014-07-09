@@ -19,6 +19,6 @@ argv = require 'yargs'
 
 {branch, repository} = argv
 
-gitBranchDiff branch, repository
+gitBranchDiff repository, branch
   .then (data) ->
     process.stdout.write JSON.stringify data, null, 2

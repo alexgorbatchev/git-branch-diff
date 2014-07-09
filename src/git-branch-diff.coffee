@@ -12,7 +12,7 @@ isSHA = (value) ->
 filesToObject = R.curry (branch, files) ->
   {branch, files: files?.length and files or null}
 
-module.exports = (targetBranch, repository) ->
+module.exports = (repository, targetBranch) ->
   git = (cmd) ->
     exec.promise "git #{cmd}", cwd: repository
       .spread (stdout, stderr) -> stdout.split /\n/g
