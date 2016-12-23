@@ -26,9 +26,9 @@
     "diff"
   ],
   "dependencies": {
-    "ramda": "^0.2.2",
+    "ramda": "^0.22.1",
     "songbird": "^1.0.1",
-    "yargs": "^1.2.6"
+    "yargs": "^6.5.0"
   },
   "devDependencies": {
     "coffee-script": "*",
